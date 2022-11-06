@@ -6,19 +6,16 @@ namespace StateIO
     {
         public GameObject Target;
         public string Sender;
-        public Color32 CL;
-        public Color32 InsideCL;
 
-        // Start is called before the first frame update
-        private void Start()
-        {
+        public Color CL;
+        public Color InsideCL;
 
-        }
+        [SerializeField] private float _speed = 5;
 
         // Update is called once per frame
         private void Update()
         {
-            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, 5 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, _speed * Time.deltaTime);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

@@ -17,17 +17,20 @@ namespace StateIO
         public GameObject UnitPrefab;
         public bool CanMake;
 
-        public Color32 CL1;
-        public Color32 CL2;
+        public Color CL1;
+        public Color CL2;
         public SpriteRenderer Inside;
+
+        public GameObject OBG;
+        public GameObject TouchPosition;
+
+        private float SecondTimer;
 
         // Start is called before the first frame update
         private void Start()
         {
             MyNumber.text = "0";
         }
-
-        private float SecondTimer;
 
         // Update is called once per frame
         private void Update()
@@ -73,36 +76,6 @@ namespace StateIO
                 Attack = 3;
             }
         }
-
-        private IEnumerator MakeUnit()
-        {
-            while (Unit > 0)
-            {
-                yield return new WaitForSeconds(0.3f);
-
-                GameObject U = Instantiate(UnitPrefab, this.transform.position, Quaternion.identity);
-                U.GetComponent<Unit>().Target = Target;
-                U.transform.tag = this.gameObject.transform.tag;
-                U.transform.name = "Unit";
-                U.GetComponent<Unit>().CL = CL1;
-                U.GetComponent<Unit>().InsideCL = CL2;
-                U.GetComponent<Unit>().Sender = this.transform.name;
-                Unit -= 1;
-                MyNumber.text = Unit.ToString();
-
-                SecondTimer = 0;
-
-                if (Unit == 0)
-                {
-                    Attack = 0;
-                    CanMake = false;
-                }
-            }
-        }
-
-
-        public GameObject OBG;
-        public GameObject TouchPosition;
 
         private void OnMouseDown()
         {
@@ -163,5 +136,30 @@ namespace StateIO
             }
         }
 
+        private IEnumerator MakeUnit()
+        {
+            while (Unit > 0)
+            {
+                yield return new WaitForSeconds(0.3f);
+
+                GameObject unit = Instantiate(UnitPrefab, this.transform.position, Quaternion.identity);
+                unit.GetComponent<Unit>().Target = Target;
+                unit.transform.tag = this.gameObject.transform.tag;
+                unit.transform.name = "Unit";
+                unit.GetComponent<Unit>().CL = CL1;
+                unit.GetComponent<Unit>().InsideCL = CL2;
+                unit.GetComponent<Unit>().Sender = this.transform.name;
+                Unit -= 1;
+                MyNumber.text = Unit.ToString();
+
+                SecondTimer = 0;
+
+                if (Unit == 0)
+                {
+                    Attack = 0;
+                    CanMake = false;
+                }
+            }
+        }
     }
 }
