@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace StateIO
@@ -10,7 +9,7 @@ namespace StateIO
 	{
 		private static FactionId? _selectedFaction;
 		private static HashSet<UnitsBaseTouchHandler> _activeHandlers = new();
-		
+
 		private UnitsBase _base;
 		private LineRenderer _renderer;
 
@@ -19,6 +18,7 @@ namespace StateIO
 			_base = GetComponent<UnitsBase>();
 			_renderer = GetComponent<LineRenderer>();
 			_renderer.enabled = false;
+			_renderer.SetPosition(0, transform.position + Camera.main.transform.position);
 		}
 
 		private void Update()
@@ -33,7 +33,7 @@ namespace StateIO
 				return;
 			_selectedFaction = _base.Player.Faction;
 			OnSelected();
-		}		
+		}
 
 		private void OnMouseEnter()
 		{
@@ -71,7 +71,6 @@ namespace StateIO
 		{
 			_activeHandlers.Add(this);
 			_renderer.enabled = true;
-			_renderer.SetPosition(0, transform.position);
 		}
 
 		private void OnDeselected() => _renderer.enabled = false;

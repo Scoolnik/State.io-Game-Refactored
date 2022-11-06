@@ -115,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964265247911037380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00495331, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -231,7 +231,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964265247911037380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
@@ -244,7 +244,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,27 +270,27 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 2.007039
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48031425
-        inSlope: 0
-        outSlope: 0
+        value: 1
+        inSlope: -0.08904049
+        outSlope: -0.08904049
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.22510715
       - serializedVersion: 3
         time: 1
-        value: 0.22834802
-        inSlope: 0
-        outSlope: 0
+        value: 0.29921746
+        inSlope: -0.092588566
+        outSlope: -0.092588566
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.25510204
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -325,8 +325,8 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 1
+    numCapVertices: 7
+    alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
@@ -392,14 +392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _faction: 3
-  _base: {fileID: 2964265247911037377}
-  Manager: 0
-  Attack: 0
-  Target: {fileID: 0}
-  UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
-    type: 3}
-  OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
-  TouchPosition: {fileID: 0}
 --- !u!1 &2964265249395880648
 GameObject:
   m_ObjectHideFlags: 0

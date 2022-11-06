@@ -172,7 +172,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -508,18 +508,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa474de661cf4441b818846b3c122af, type: 3}
---- !u!1001 &1943319178
+--- !u!1001 &1848311847
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2964265247911037379, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2964265248498063011, guid: 2aa474de661cf4441b818846b3c122af,
         type: 3}
       propertyPath: m_RootOrder
@@ -580,36 +575,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player area (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.48031425
-      objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.22834802
-      objectReference: {fileID: 0}
-    - target: {fileID: 7423156934236869113, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].value
-      value: 0.503937
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa474de661cf4441b818846b3c122af, type: 3}
 --- !u!1001 &2964265247361048239
@@ -619,11 +584,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2964265247911037379, guid: 2aa474de661cf4441b818846b3c122af,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2964265248498063011, guid: 2aa474de661cf4441b818846b3c122af,
         type: 3}
       propertyPath: m_RootOrder
