@@ -76,6 +76,10 @@ namespace StateIO
 
 		private void OnDeselected() => _renderer.enabled = false;
 
-		private void OnTargetSelected(UnitsBase target) => _base.SendAllUnits(target);
+		private void OnTargetSelected(UnitsBase target)
+		{
+			if (target != _base)
+				_base.SendAllUnits(target);
+		}
 	}
 }
