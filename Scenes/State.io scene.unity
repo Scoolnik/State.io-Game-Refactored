@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 241612596}
   m_Layer: 0
   m_Name: F2
-  m_TagString: Area F
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 0
   Unit: 0
   MyNumber: {fileID: 1144034986}
   Manager: 0
@@ -567,12 +568,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4288256652
-  CL2:
-    serializedVersion: 2
-    rgba: 4288256652
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 1925436291}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -661,7 +658,7 @@ GameObject:
   - component: {fileID: 428894998}
   m_Layer: 0
   m_Name: E
-  m_TagString: Area E
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -824,6 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 5
   Unit: 0
   MyNumber: {fileID: 1404369885}
   Manager: 0
@@ -832,12 +830,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4292896867
-  CL2:
-    serializedVersion: 2
-    rgba: 4289345074
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 572713567}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -1010,7 +1004,7 @@ GameObject:
   - component: {fileID: 520371851}
   m_Layer: 0
   m_Name: F1
-  m_TagString: Area F
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1173,6 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 0
   Unit: 0
   MyNumber: {fileID: 53814412}
   Manager: 0
@@ -1181,12 +1176,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4288256652
-  CL2:
-    serializedVersion: 2
-    rgba: 4288256652
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 1772013474}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -1617,7 +1608,7 @@ GameObject:
   - component: {fileID: 1144948752}
   m_Layer: 0
   m_Name: A
-  m_TagString: Area A
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1703,6 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 3
   Unit: 0
   MyNumber: {fileID: 2059086953}
   Manager: 0
@@ -1711,12 +1703,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4292912995
-  CL2:
-    serializedVersion: 2
-    rgba: 4289359154
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 557340525}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -1882,7 +1870,7 @@ GameObject:
   - component: {fileID: 1302765761}
   m_Layer: 0
   m_Name: C
-  m_TagString: Area C
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2045,6 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 2
   Unit: 0
   MyNumber: {fileID: 1715766031}
   Manager: 0
@@ -2053,12 +2042,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4284735641
-  CL2:
-    serializedVersion: 2
-    rgba: 4281510479
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 2012338988}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -2748,7 +2733,7 @@ GameObject:
   - component: {fileID: 1586357729}
   m_Layer: 0
   m_Name: D
-  m_TagString: Area D
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2911,6 +2896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 4
   Unit: 0
   MyNumber: {fileID: 1412663836}
   Manager: 0
@@ -2919,12 +2905,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4291193577
-  CL2:
-    serializedVersion: 2
-    rgba: 4285013175
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 1401846425}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -3527,7 +3509,7 @@ GameObject:
   - component: {fileID: 1909305701}
   m_Layer: 0
   m_Name: F3
-  m_TagString: Area F
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3690,6 +3672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 0
   Unit: 0
   MyNumber: {fileID: 1841473137}
   Manager: 0
@@ -3698,12 +3681,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4288256652
-  CL2:
-    serializedVersion: 2
-    rgba: 4288256652
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 1703414428}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}
@@ -4134,7 +4113,7 @@ GameObject:
   - component: {fileID: 2117852838}
   m_Layer: 0
   m_Name: B
-  m_TagString: Area B
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4220,6 +4199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5c6a8035bb5114d824586cbe5ef618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _faction: 1
   Unit: 0
   MyNumber: {fileID: 1319331556}
   Manager: 0
@@ -4228,12 +4208,8 @@ MonoBehaviour:
   UnitPrefab: {fileID: 8334031571239083735, guid: 72dffff07c8b92a40b9108664cbeaaa5,
     type: 3}
   CanMake: 0
-  CL1:
-    serializedVersion: 2
-    rgba: 4285229801
-  CL2:
-    serializedVersion: 2
-    rgba: 4280163511
+  CL1: {r: 0, g: 0, b: 0, a: 0}
+  CL2: {r: 0, g: 0, b: 0, a: 0}
   Inside: {fileID: 16943746}
   OBG: {fileID: 8059875965375492786, guid: 597783dc5c8b70c418e61a5c429f36cb, type: 3}
   TouchPosition: {fileID: 0}

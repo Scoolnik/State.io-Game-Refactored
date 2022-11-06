@@ -6,6 +6,10 @@ namespace StateIO
 {
     public class Area : MonoBehaviour
     {
+        public FactionId Faction => _faction;
+
+        [SerializeField] private FactionId _faction;
+
         public int Unit;
         private float Timer;
 
@@ -17,8 +21,6 @@ namespace StateIO
         public GameObject UnitPrefab;
         public bool CanMake;
 
-        public Color CL1;
-        public Color CL2;
         public SpriteRenderer Inside;
 
         public GameObject OBG;
@@ -103,43 +105,38 @@ namespace StateIO
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            //handling enemy units
-            //if (other.transform.tag != this.transform.tag && other.transform.tag != "Touch")
-            //{
-            //    Destroy(other.gameObject);
+            if (!other.CompareTag(Tags.UnitTag))
+                return;
+            var unit = other.GetComponent<Unit>();
+            if (unit.Sender.Faction != _faction)
+            {
+				Destroy(other.gameObject);
 
-            //    if (Unit > 0)
-            //    {
-            //        Unit -= 1;
-            //        MyNumber.text = Unit.ToString();
+                //todo remade
+				if (Unit > 0)
+				{
+					Unit -= 1;
+					MyNumber.text = Unit.ToString();
 
-            //        CanMake = true;
-            //    }
-            //    else
-            //    {
-            //        transform.tag = other.transform.tag;
-            //        GetComponent<SpriteRenderer>().color = other.GetComponent<Unit>().CL;
-            //        Inside.color = other.GetComponent<Unit>().InsideCL;
-            //    }
+					CanMake = true;
+				}
+				else
+				{
+					transform.tag = other.transform.tag;
+                    //todo move to separate class, make event
+                    var newFaction = Factions.Instance.GetFactionInfo(unit.Sender.Faction);
+                    _faction = newFaction.Id;
+					GetComponent<SpriteRenderer>().color = newFaction.SecondaryColor;
+					Inside.color = newFaction.PrimaryColor;
+				}
+			}
+            else
+            {
+				//todo bring back ability to move units from one player base to another
+			}
+		}
 
-            //}
-
-            //moving units from one base to another
-            //if (other.transform.tag == this.transform.tag && other.transform.tag != "Touch")
-            //{
-            //    if (other.GetComponent<Unit>()._sender != this.transform.name)
-            //    {
-            //        Destroy(other.gameObject);
-            //        Unit += 1;
-            //        MyNumber.text = Unit.ToString();
-
-            //        CanMake = true;
-            //    }
-
-            //}
-        }
-
-        private IEnumerator MakeUnit()
+		private IEnumerator MakeUnit()
         {
             while (Unit > 0)
             {

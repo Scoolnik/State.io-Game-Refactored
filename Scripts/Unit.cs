@@ -4,13 +4,14 @@ namespace StateIO
 {
     public class Unit : MonoBehaviour
     {
-		[SerializeField] private Area _target;
-        [SerializeField] private Area _sender;
+        public Area Sender => _sender;
 
         [SerializeField] private float _speed = 5;
 
-        // Update is called once per frame
-        private void Update()
+		private Area _target;
+		private Area _sender;
+
+		private void Update()
         {
             transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _speed * Time.deltaTime);
         }
