@@ -103,37 +103,40 @@ namespace StateIO
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.transform.tag != this.transform.tag && other.transform.tag != "Touch")
-            {
-                Destroy(other.gameObject);
+            //handling enemy units
+            //if (other.transform.tag != this.transform.tag && other.transform.tag != "Touch")
+            //{
+            //    Destroy(other.gameObject);
 
-                if (Unit > 0)
-                {
-                    Unit -= 1;
-                    MyNumber.text = Unit.ToString();
+            //    if (Unit > 0)
+            //    {
+            //        Unit -= 1;
+            //        MyNumber.text = Unit.ToString();
 
-                    CanMake = true;
-                }
-                else
-                {
-                    transform.tag = other.transform.tag;
-                    GetComponent<SpriteRenderer>().color = other.GetComponent<Unit>().CL;
-                    Inside.color = other.GetComponent<Unit>().InsideCL;
-                }
+            //        CanMake = true;
+            //    }
+            //    else
+            //    {
+            //        transform.tag = other.transform.tag;
+            //        GetComponent<SpriteRenderer>().color = other.GetComponent<Unit>().CL;
+            //        Inside.color = other.GetComponent<Unit>().InsideCL;
+            //    }
 
-            }
-            if (other.transform.tag == this.transform.tag && other.transform.tag != "Touch")
-            {
-                if (other.GetComponent<Unit>().Sender != this.transform.name)
-                {
-                    Destroy(other.gameObject);
-                    Unit += 1;
-                    MyNumber.text = Unit.ToString();
+            //}
 
-                    CanMake = true;
-                }
+            //moving units from one base to another
+            //if (other.transform.tag == this.transform.tag && other.transform.tag != "Touch")
+            //{
+            //    if (other.GetComponent<Unit>()._sender != this.transform.name)
+            //    {
+            //        Destroy(other.gameObject);
+            //        Unit += 1;
+            //        MyNumber.text = Unit.ToString();
 
-            }
+            //        CanMake = true;
+            //    }
+
+            //}
         }
 
         private IEnumerator MakeUnit()
@@ -142,13 +145,9 @@ namespace StateIO
             {
                 yield return new WaitForSeconds(0.3f);
 
-                GameObject unit = Instantiate(UnitPrefab, this.transform.position, Quaternion.identity);
-                unit.GetComponent<Unit>().Target = Target;
-                unit.transform.tag = this.gameObject.transform.tag;
-                unit.transform.name = "Unit";
-                unit.GetComponent<Unit>().CL = CL1;
-                unit.GetComponent<Unit>().InsideCL = CL2;
-                unit.GetComponent<Unit>().Sender = this.transform.name;
+                var unit = Instantiate(UnitPrefab, this.transform.position, Quaternion.identity).GetComponent<Unit>();
+                unit.Init(this, Target.GetComponent<Area>());
+
                 Unit -= 1;
                 MyNumber.text = Unit.ToString();
 
