@@ -11,10 +11,7 @@ namespace StateIO
 
 		[SerializeField] private Faction[] _factions;
 
-		private void Awake()
-		{
-			Instance = this;
-		}
+		private void OnEnable() => Instance = this;
 
 		public FactionId GetRandom() => _factions[Random.Range(0, _factions.Length)].Id;
 
