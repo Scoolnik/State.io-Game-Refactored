@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace StateIO
 {
+	[ExecuteAlways]
     [RequireComponent(typeof(UnitsBase))]
     public class UnitsBaseView : MonoBehaviour
     {

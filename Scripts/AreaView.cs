@@ -2,6 +2,7 @@
 
 namespace StateIO
 {
+	[ExecuteAlways]
 	[RequireComponent(typeof(SpriteRenderer))]
 	internal class AreaView : MonoBehaviour
 	{
