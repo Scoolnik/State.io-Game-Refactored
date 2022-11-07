@@ -31,13 +31,13 @@ namespace StateIO
 		{
 			if (_selectedFaction != null)
 				return;
-			_selectedFaction = _base.Player.Faction;
+			_selectedFaction = _base.Faction;
 			OnSelected();
 		}
 
 		private void OnMouseEnter()
 		{
-			if (_selectedFaction == _base.Player.Faction)
+			if (_selectedFaction == _base.Faction)
 				OnSelected();
 		}
 

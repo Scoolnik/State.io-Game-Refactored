@@ -9,7 +9,7 @@ namespace StateIO
 
         private void Start()
         {
-            _sprite.color = Factions.Instance.GetFactionInfo(GetComponent<Unit>().Sender.Player.Faction).PrimaryColor;
+            _sprite.color = Factions.Instance.GetFactionInfo(GetComponent<Unit>().Sender.Faction).PrimaryColor;
         }
     }
 }

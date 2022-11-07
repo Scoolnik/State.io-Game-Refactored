@@ -6,9 +6,9 @@ namespace StateIO
 {
 	public class UnitsBase : MonoBehaviour
 	{
-		public Player Player => _player;
+		public FactionId Faction => _faction;
 
-		[SerializeField] private Player _player;
+		[SerializeField] private FactionId _faction;
 		[SerializeField] private float _unitProductionTime = 1f;
 		[SerializeField] private float _unitSendPeriod = 0.5f;
 		[SerializeField] private int _startUnitCount = 0;
@@ -19,11 +19,7 @@ namespace StateIO
 		public event Action<int> UnitsCountChanged;
 		public event Action<FactionId> Captured;
 
-		private void Start()
-		{
-			ChangeUnitsCount(_startUnitCount);
-			Captured?.Invoke(_player.Faction);
-		}
+		private void Start() => ChangeUnitsCount(_startUnitCount);
 
 		private void OnEnable() => StartCoroutine(ProduceUnits());
 
@@ -34,20 +30,23 @@ namespace StateIO
 			var unit = other.GetComponent<Unit>();
 			if (unit.Sender == this)
 				return;
-			if (unit.Sender.Player.Faction != _player.Faction)
+			if (unit.Sender.Faction != _faction)
 			{
 				ChangeUnitsCount(-1);
 				if (_unitCount == 0)
-				{
-					_player = unit.Sender.Player;
-					Captured?.Invoke(_player.Faction);
-				}
+					SetFaction(unit.Sender.Faction);
 			}
 			else
 			{
 				ChangeUnitsCount(1);
 			}
 			Destroy(unit.gameObject); //todo use pool
+		}
+
+		public void SetFaction(FactionId faction)
+		{
+			_faction = faction;
+			Captured?.Invoke(_faction);
 		}
 
 		public void SendAllUnits(UnitsBase target) => StartCoroutine(SendUnits(target));
