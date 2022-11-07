@@ -54,14 +54,13 @@ namespace StateIO
 
 		private IEnumerator SendUnits(UnitsBase target)
 		{
-			do
+			while (_unitCount > 0)
 			{
 				ChangeUnitsCount(-1);
 				var unit = Instantiate(_unitPrefab, transform.position, Quaternion.identity).GetComponent<Unit>();
 				unit.Init(this, target);
 				yield return new WaitForSeconds(_unitSendPeriod);
-			} 
-			while (_unitCount > 0);
+			}
 		}
 
 		private IEnumerator ProduceUnits()

@@ -43,7 +43,6 @@ namespace StateIO
 
 		private void OnMouseUp()
 		{
-			print(gameObject.layer);
 			var collider = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward, 100, 1 << gameObject.layer).collider;
 			if (collider)
 			{
