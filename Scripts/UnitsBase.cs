@@ -31,8 +31,6 @@ namespace StateIO
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
-			if (!other.CompareTag(Tags.UnitTag)) //todo get rid of this using layers
-				return;
 			var unit = other.GetComponent<Unit>();
 			if (unit.Sender == this)
 				return;
@@ -56,7 +54,7 @@ namespace StateIO
 
 		private IEnumerator SendUnits(UnitsBase target)
 		{
-			do //todo constrain by current number of units
+			do
 			{
 				ChangeUnitsCount(-1);
 				var unit = Instantiate(_unitPrefab, transform.position, Quaternion.identity).GetComponent<Unit>();
