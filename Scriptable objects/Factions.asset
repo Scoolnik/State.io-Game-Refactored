@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factions:
   - Id: 0
-    PrimaryColor: {r: 0.54901963, g: 0.6039216, b: 0.6, a: 1}
+    PrimaryColor: {r: 0.45122817, g: 0.49056602, b: 0.48775616, a: 1}
     SecondaryColor: {r: 0.54901963, g: 0.6039216, b: 0.6, a: 1}
   - Id: 1
     PrimaryColor: {r: 0.7176471, g: 0.10980393, b: 0.11764707, a: 1}
