@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
 
 namespace StateIO
 {
@@ -11,10 +11,12 @@ namespace StateIO
 
 		[SerializeField] private Faction[] _factions;
 
-		private void OnEnable() => Instance = this;
+		private Dictionary<FactionId, Faction> _factionsDict;
+
+		private void OnEnable() => _factionsDict = _factions.ToDictionary(x => x.Id);
 
 		public FactionId GetRandom() => _factions[Random.Range(0, _factions.Length)].Id;
 
-		public Faction GetFactionInfo(FactionId id) => _factions.FirstOrDefault(x => x.Id == id) ?? throw new System.Exception($"There is no {id} faction data in {nameof(Factions)}");
+		public Faction GetFactionInfo(FactionId id) => _factionsDict[id];
 	}
 }

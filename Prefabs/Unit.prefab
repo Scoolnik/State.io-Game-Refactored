@@ -152,3 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprite: {fileID: 566487980873669083}
+  _factions: {fileID: 11400000, guid: d3299193b9f4ace43a416c2318e4e811, type: 2}

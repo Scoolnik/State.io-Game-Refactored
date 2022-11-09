@@ -4,21 +4,23 @@ using UnityEngine;
 
 namespace StateIO
 {
-    [ExecuteAlways]
     public class Area : MonoBehaviour
     {
         [field: SerializeField] public UnitsBase[] Bases { get; protected set; }
-        [field: SerializeField, OnChanged(nameof(Start))] public FactionId Faction { get; protected set; }
+        [field: SerializeField] public FactionId Faction { get; protected set; }
 
         [SerializeField] private bool _autoCaptureBasesInside = true;
 
         public event Action<FactionId> Captured;
 
-        private void Awake()
+        private void OnValidate()
         {
-            if (Bases.Length == 0)
-                Bases = GetComponentsInChildren<UnitsBase>();
+            FindBases();
+            Start();
+            Captured?.Invoke(Faction);
         }
+
+        private void Awake() => FindBases();
 
         private void OnEnable()
         {
@@ -35,11 +37,18 @@ namespace StateIO
         private void Start()
         {
             if (_autoCaptureBasesInside)
-            {
-                foreach (var b in Bases)
-                    b.SetFaction(Faction);
-            }
+                SetBasesFaction();
+            else
+                Captured?.Invoke(Faction);
         }
+
+        private void SetBasesFaction()
+        {
+            foreach (var b in Bases)
+                b.SetFaction(Faction);
+        }
+
+        private void FindBases() => Bases = GetComponentsInChildren<UnitsBase>();
 
         private void OnBaseCaptured(FactionId faction)
         {

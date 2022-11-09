@@ -6,10 +6,11 @@ namespace StateIO
     public class UnitView : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer _sprite;
+		[SerializeField] private Factions _factions;
 
-        private void Start()
+		private void Start()
         {
-            _sprite.color = Factions.Instance.GetFactionInfo(GetComponent<Unit>().Sender.Faction).PrimaryColor;
+            _sprite.color = _factions.GetFactionInfo(GetComponent<Unit>().Sender.Faction).PrimaryColor;
         }
     }
 }

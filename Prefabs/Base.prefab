@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprite: {fileID: 6664226218835183915}
+  _factions: {fileID: 11400000, guid: d3299193b9f4ace43a416c2318e4e811, type: 2}
 --- !u!120 &1322756471572353296
 LineRenderer:
   m_ObjectHideFlags: 0

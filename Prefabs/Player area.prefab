@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _area: {fileID: -7715518767990799326}
+  _factions: {fileID: 11400000, guid: d3299193b9f4ace43a416c2318e4e811, type: 2}
 --- !u!1 &2964265248498063013
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Bases>k__BackingField: []
   <Faction>k__BackingField: 0
+  _autoCaptureBasesInside: 1
 --- !u!1001 &8457542286794932457
 PrefabInstance:
   m_ObjectHideFlags: 0
